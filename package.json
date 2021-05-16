@@ -1,0 +1,22 @@
+{
+  "name": "node-koa-server",
+  "version": "1.0.0",
+  "description": "다양한 학습하기 위한 실습용 코드",
+  "main": "server.js",
+  "scripts": {
+    "dev": "./node_modules/.bin/nodemon ./src/server.js",
+    "prod": "node ./src/server.js",
+    "start": "pm2 start ./src/server.js",
+    "test": "exit"
+  },
+  "author": "jeffchoi",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.6.2",
+    "koa-router": "^7.4.0",
+    "nodemon": "^1.18.9",
+    "pg": "^8.6.0",
+    "postgres": "^1.0.2",
+    "sequelize": "^6.6.2"
+  }
+}
