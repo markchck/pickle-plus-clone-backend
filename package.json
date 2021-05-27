@@ -12,11 +12,16 @@
   "author": "jeffchoi",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^10.0.0",
+    "encodeurl": "^1.0.2",
+    "joi": "^17.4.0",
     "koa": "^2.6.2",
+    "koa-bodyparser": "^4.3.0",
     "koa-router": "^7.4.0",
     "nodemon": "^1.18.9",
     "pg": "^8.6.0",
     "postgres": "^1.0.2",
-    "sequelize": "^6.6.2"
+    "sequelize": "^6.6.2",
+    "tsscmp": "^1.0.6"
   }
 }
