@@ -19,5 +19,5 @@ app.use(router.routes())
 app.use(router.allowedMethods)
 
 
-app.listen(4000, () => { console.info('Server is running on port 4000'); });
+app.listen(3000, () => { console.info('Server is running on port 3000'); });
 

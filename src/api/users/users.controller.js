@@ -77,16 +77,21 @@ exports.delete = async (ctx) => {
 };
 
 //update(patch) 구현
-// exports.update = async (ctx) => {
-//   const {id} = ctx.params
-
-//   let users;
-//   try{
-//     book = await User.findByPkAndUpdate({where: {id}}, ctx.request.body, {
-//       new: true
-//     })
-//   } catch (e){
-//     return ctx.throw(500,e)
-//   }
-//   ctx.body = user;
-// };
+exports.update = async (ctx)=>{
+  const{id} = ctx.params
+  const{name, email}=ctx.request.body;
+  
+  try{
+    const user = await User.findByPk(id);
+    if(!user){
+      ctx.status=404;
+    }else{
+      user.name = name;
+      user.email = email;
+      await user.save();
+      ctx.body = user;
+    }
+  }catch(e){
+    ctx.throw(500,e)
+  }
+};
